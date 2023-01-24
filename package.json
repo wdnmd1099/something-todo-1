@@ -1,5 +1,11 @@
 {
-  "name": "node-todo-1099",
+  "name": "something-todo-1",
+  "bin":{
+    "t":"cli.js"
+  },
+  "files":[
+    "*.js"
+  ],
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

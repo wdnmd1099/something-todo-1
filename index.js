@@ -71,7 +71,7 @@ module.exports.showAll = async () => {
                                 })
                                 break;
                             case 'remove':
-                                list.splice(index,1)
+                                list.splice(index-1,1)
                                 db.write(list)
                                 break;
                         }

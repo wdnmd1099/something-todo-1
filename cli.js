@@ -21,5 +21,10 @@ program
   });
 
 
-
 program.parse(process.argv);
+
+if(process.argv.length === 2){
+  //用户没有传参数
+  api.showAll()
+  
+}

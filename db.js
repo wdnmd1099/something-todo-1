@@ -27,6 +27,7 @@ const db = {
     write(list) {
         return new Promise((resolve, reject) => {
             const string = JSON.stringify(list) //将一个 JavaScript 对象或值转换为 JSON 字符串
+            // console.log(string)
             fs.writeFile(dbPath, string + '\n', error3 => {
                 if (error3) { console.log(error3); return reject(error3) }
                 resolve()

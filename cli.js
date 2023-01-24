@@ -11,7 +11,6 @@ program
   .action((...args) => {
     const words = args.slice(0, -1).join(' ')
     api.add(words)
-    // console.log(words)
   });
 program
   .command('clear')
@@ -26,5 +25,5 @@ program.parse(process.argv);
 if(process.argv.length === 2){
   //用户没有传参数
   api.showAll()
-  
+
 }

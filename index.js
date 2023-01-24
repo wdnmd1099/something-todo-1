@@ -16,12 +16,6 @@ module.exports.clear = async () => {
 
 module.exports.showAll = async () => {
     const list = await db.read()
-    console.log(list[0])
-    list.map((item, index) => {
-        // console.log(`${item.done === true? '[x]' : '[_]'} ${index+1} ${item.words}`)
-        // renWu.push(`${item.done === true? '[x]' : '[_]'} ${index+1} ${item.words}`)
-    })
-    // console.log(renWu)
 
     inquirer.prompt([
         {
@@ -58,7 +52,6 @@ module.exports.showAll = async () => {
                     .then((answers2) => {
                         switch (answers2.action) {
                             case 'markAsDone':
-                                console.log('shit')
                                 list[index - 1].done = true
                                 db.write(list)
                                 break;
@@ -67,7 +60,6 @@ module.exports.showAll = async () => {
                                 db.write(list)
                                 break;
                             case 'upDateTitle':
-                                 console.log(list[index-1].words)
                                 inquirer.prompt({
                                     type: 'input',
                                     name: 'title',

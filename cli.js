@@ -2,9 +2,6 @@
 const program = require('commander');
 const api = require('./index.js')
 
-program
-  .option('-x, --xxx', '起飞咯')
-
 
 program
   .command('add <任务名>')
@@ -26,5 +23,4 @@ program.parse(process.argv);
 if(process.argv.length === 2){
   //用户没有传参数
   api.showAll()
-
 }
